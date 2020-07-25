@@ -1,0 +1,57 @@
+@import "../../scss/util/mixin";
+@import "../../scss/util/variable";
+
+.login__container {
+  @include hxw(100vh, 100%);
+  display: flex;
+
+  div {
+    flex: 1;
+  }
+
+  &-desc {
+    h1 {
+      margin-top: 12%;
+      margin-left: 10%;
+      font-size: 7rem;
+      font-family: $fontText;
+    }
+
+    &--text {
+      margin-left: 18%;
+      margin-top: 7%;
+      @include hxw(25%, 70%);
+
+      p {
+        font-size: 2.5rem;
+        font-family: $fontText;
+      }
+
+      .uno {
+        margin-bottom: 5%;
+
+        span {
+          color: var(--color1);
+        }
+      }
+
+      .dos {
+        margin-bottom: 5%;
+      }
+    }
+  }
+
+  &-form {
+
+    background-color: var(--back2);
+    background-size: cover;
+    // clip-path: ellipse(40% 55% at 51% 65%);
+    clip-path: polygon(32% 0%, 100% 0%, 100% 100%, 0% 100%);
+    @include flexCenter;
+    form {
+      margin-top: 17%;
+      @include hxw(50%, 50%);
+    }
+  }
+
+}

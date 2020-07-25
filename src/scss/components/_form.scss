@@ -1,0 +1,48 @@
+.form__group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+
+  span {
+    color: var(--color1);
+    font-family: $fontForm;
+    font-size: 1.5rem;
+  }
+
+  .form__input {
+    margin-top: 2%;
+    padding-top: 4%;
+    padding-left: 3%;
+    padding-bottom: 4%;
+    outline: none;
+    border: none;
+    color: black;
+    border-radius: 2rem;
+  }
+}
+
+.form__button {
+  @include flexCenter;
+  // background: red;
+  margin-top: 7%;
+
+  button {
+    background: var(--color1);
+    width: 55%;
+    padding: 1.5rem;
+    outline: none;
+    border: none;
+    font-family: $fontForm;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--back1);
+    transition: .3s;
+
+    &:hover {
+      background: var(--color1dark);
+      transition: .3s;
+    }
+
+  }
+}

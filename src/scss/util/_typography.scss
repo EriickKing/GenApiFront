@@ -1,0 +1,27 @@
+* {
+  font-weight: normal;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 43.75%;
+  }
+
+  @include respond(smallphone) {
+    font-size: 30.75%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 90%;
+  }
+}

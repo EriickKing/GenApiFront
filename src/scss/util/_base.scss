@@ -1,0 +1,27 @@
+@import "./mixin";
+@import "./variable";
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--colorFont);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  background: var(--back1);
+}
+
+.size {
+  height: 100%;
+  width: 100%;
+}
+
+a:visited,
+a:link {
+  text-decoration: none;
+}

@@ -1,0 +1,25 @@
+$fontText: 'Tajawal', sans-serif;
+$fontTitle: 'Fredoka One', cursive;
+$fontForm: 'Baloo Thambi 2', cursive;
+
+:root {
+  --color1: #F55B53;
+  --back1: white;
+  --back2: #e6e6e6;
+  --color1dark: #f23026;
+}
+
+[data-theme="dark"] {
+  --color1: #F4BF4D;
+  --back1: #131313;
+  --back2: #191919;
+  --colorFont: white;
+  --color1dark: #f0a90f;
+
+
+}
+
+
+// fredoka titulos
+// tajawal texto
+// baloo inputs, buttons

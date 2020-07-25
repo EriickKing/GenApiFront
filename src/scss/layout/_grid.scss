@@ -1,0 +1,46 @@
+@mixin columnRepeat() {
+  grid-template-columns: repeat(auto-fit, minmax(25%,  1fr));
+}
+
+@mixin columnsN($content) {
+  grid-template-columns: $content;
+}
+
+.gridCenter {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.together {
+  display: grid;
+  // background: red;
+  grid-template-rows: 80%;
+}
+
+
+.gridCenterRow {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  align-items: center;
+}
+
+  // display: grid;
+  // HACER COLUMNAS
+  // minmax(TAMAÑO MINIMO, TAMAÑO MAXIMO) dentro de colums o rows
+  // autofit 
+  // repeat(NUMERO DE VECES, TAMAÑO)
+  // grid-template-columns: 20% 60% 20%;
+  // grid-gap: 10px;
+  // grid-template-rows: 1fr; HACER FILAS
+
+
+// grid-auto-flow FUNCIONA COMO FLEX-DIRECTION
+// justify-items horizontal
+// align-items vertical
+// grid-colum-start DONDE EMPIEZA UN ELEMENTO
+// grid-colum-end DONDE TERMINA
+// ==
+// grid-colum: EMPIEZA / ACABA; 
+// grid-row: EMPIEZA / ACABA; 

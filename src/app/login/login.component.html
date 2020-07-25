@@ -1,0 +1,25 @@
+<section class="login__container">
+  <div class="login__container-desc">
+    <h1>N - ATE</h1>
+    <div class="login__container-desc--text">
+      <p class="uno">N-ATE te permitirá facilitar el proceso de tus API RESTful en <span>Node.js</span></p>
+      <p class="dos">Diseña y Crea con un solo click</p>
+      <p class="tres">Comienza ahora y podras ahorrarte todo el tiempo perdido con N-ATE</p>
+    </div>
+  </div>
+  <div class="login__container-form">
+    <form [formGroup]="loginForm">
+      <div class="form__group">
+        <span>Correo Electronico</span>
+        <input type="text" class="form__input" formControlName="emailUser">
+      </div>
+      <div class="form__group">
+        <span>Contraseña</span>
+        <input type="password" class="form__input" formControlName="passwordUser">
+      </div>
+      <div class="form__button">
+        <button (click)="logIn()">INICIAR SESION</button>
+      </div>
+    </form>
+  </div>
+</section>

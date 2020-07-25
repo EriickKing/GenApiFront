@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "GenApiFront:build"
+            "browserTarget": "GenApiFront:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GenApiFront"
+    }
+  },
+  "defaultProject": "GenApiFront",
+  "cli": {
+    "analytics": false
+  }
 }
