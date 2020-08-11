@@ -1,0 +1,78 @@
+@import "../../../scss/util/mixin";
+@import "../../../scss/util/variable";
+
+.new__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // height: auto;
+  height: 85vh;
+  // background: red;
+
+  .container {
+    @include hxw(85%, 100%);
+    position: absolute;
+    filter: var(--shadow);
+    z-index: 0;
+    .path {
+      @include hxw(100%, 100%);
+      position: absolute;
+      bottom: 0;
+      background: var(--color1);
+      clip-path: circle(53.2% at 0 100%);
+    }
+  }
+
+  &-form {
+    margin-top: 1%;
+    border-radius: 5px;
+    align-self: center;
+    @include hxw(80vh, 90%);
+    display: flex;
+    font-family: $fontText;
+    text-align: center;
+    position: relative;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 2%;
+      color: var(--color1);
+
+    }
+
+    p {
+      // color: var(--color1);
+      font-size: 1.4rem;
+      font-weight: bold;
+
+    }
+
+    div {
+      flex: 1;
+      display: flex;
+
+      flex-direction: column;
+
+      form {
+        @include hxw(auto, 50%);
+        align-self: center;
+        // margin-top: 5%;
+        // background: red;
+        // margin-left: 12%;
+
+        textarea {
+          resize: none;
+        }
+      }
+    }
+
+
+
+    .form__button {
+      position: absolute;
+      width: 35%;
+      bottom: 5%;
+      left: 32.5%;
+    }
+  }
+}

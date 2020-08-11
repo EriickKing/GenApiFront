@@ -1,0 +1,121 @@
+@import "../../../scss/util/mixin";
+@import "../../../scss/util/variable";
+
+.landing__container {
+  @include hxw(auto, 100%);
+  display: flex;
+  flex-direction: column;
+  background: var(--back2);
+
+
+  .cont {
+    position: fixed;
+    bottom: 0;
+    @include hxw(85vh, 100%);
+
+    filter: var(--shadow);
+
+    .path {
+
+      @include hxw(100vh, 100%);
+      background: var(--color1);
+      clip-path: circle(57.1% at 50% 100%);
+    }
+  }
+
+  &-projects {
+    @include hxw(auto, 78%);
+    margin-left: 11%;
+    // background: rgba($color: #fff, $alpha: 0.4);
+    // background: transparent;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+
+    // justify-content: center;
+    &--boxs {
+      @include hxw(25rem, 25rem);
+      margin: .5%;
+      background: var(--back1);
+      // border-radius: 100%;
+      @include flexCenter;
+      flex-direction: column;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(5px);
+        transition: .3s;
+      }
+
+      h1,
+      h2 {
+        font-family: $fontForm;
+        color: var(--color1);
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3,
+      p,
+      span {
+        font-family: $fontText;
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+        // background: green;
+        max-height: 20%;
+        min-height: 20%;
+      }
+
+      span {
+        font-size: 1.2rem;
+      }
+
+    }
+
+    .add {
+      @include flexCenter;
+      flex-direction: column;
+      background: var(--color1);
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.45);
+
+      .addA {
+        @include flexCenter;
+        @include hxw(50%, 50%);
+        transition: .3s;
+
+        i {
+          transition: .3s;
+          color: var(--back2);
+        }
+
+        // background: red;
+      }
+
+      &:hover>.addA {
+        transition: .3s;
+        @include hxw(50%, 50%);
+        border-radius: 100%;
+        border: 5px dashed var(--back2);
+      }
+
+
+
+      .addh1 {
+        color: white;
+        margin-top: 2%;
+        font-size: 2rem;
+        font-weight: 600;
+        font-family: $fontText;
+
+      }
+    }
+  }
+
+}

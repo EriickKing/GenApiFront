@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<section class="new__container">
+  <div class="container">
+    <div class="path"></div>
+  </div>
+
+  <div class="new__container-form">
+    <div class="left">
+      <h1>PROYECTO NUEVO</h1>
+      <p>Ingresa los datos basicos de tu proyecto nuevo</p>
+      <form [formGroup]="projectForm">
+        <div class="form__group">
+          <span style="color: white;">Titulo</span>
+          <input type="text" class="form__input" formControlName="titleProject">
+        </div>
+        <div class="form__group">
+          <span style="color: white;">Descripcion</span>
+          <textarea cols="30" rows="13" class="form__input" formControlName="descProject"></textarea>
+        </div>
+      </form>
+    </div>
+    <div class="right">
+      <h1>CONFIGURACION</h1>
+      <p>Ingresa la configuracion de tu base de datos en MongoDB</p>
+      <form [formGroup]="projectForm">
+        <div class="form__group">
+          <span>Usuario MongoDB</span>
+          <input type="text" class="form__input" formControlName="dbUser">
+        </div>
+        <div class="form__group">
+          <span>Contraseña MongoDB</span>
+          <input type="password" class="form__input" formControlName="dbPassword">
+        </div>
+        <div class="form__group">
+          <span>URL Mongodb</span>
+          <input type="text" class="form__input" formControlName="dbUrl" placeholder="Ej. @mongo.mongodb.net:27017">
+        </div>
+        <div class="form__group">
+          <span>Nombre Base de Datos</span>
+          <input type="text" class="form__input" formControlName="dbName">
+        </div>
+
+      </form>
+    </div>
+    <div class="form__button">
+      <button (click)="newProject()">CREAR PROYECTO</button>
+    </div>
+  </div>
+</section>

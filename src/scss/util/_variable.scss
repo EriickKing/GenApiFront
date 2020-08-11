@@ -2,24 +2,27 @@ $fontText: 'Tajawal', sans-serif;
 $fontTitle: 'Fredoka One', cursive;
 $fontForm: 'Baloo Thambi 2', cursive;
 
-:root {
-  --color1: #F55B53;
-  --back1: white;
-  --back2: #e6e6e6;
-  --color1dark: #f23026;
-}
-
-[data-theme="dark"] {
-  --color1: #F4BF4D;
-  --back1: #131313;
-  --back2: #191919;
-  --colorFont: white;
-  --color1dark: #f0a90f;
-
-
-}
-
-
 // fredoka titulos
 // tajawal texto
 // baloo inputs, buttons
+
+:root {
+  --color1: #3399ff;
+  --back1: #F4F4F4;
+  --back2: #fff;
+  --color1dark: #3399ff;
+  --shadow: drop-shadow(0 15px 30px rgba(51,153,255, 0.5));
+}
+
+[data-theme="dark"] {
+  --color1: #ff3333;
+  --back1: #131313;
+  --back2: #1B1E2D;
+  --colorFont: white;
+  --color1dark: #ff3333;
+  --shadow: drop-shadow(0 15px 30px rgba(255,51,51,0.5));
+
+}
+
+
+

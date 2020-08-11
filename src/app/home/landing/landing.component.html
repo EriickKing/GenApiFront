@@ -1,0 +1,22 @@
+<section class="landing__container">
+  <app-navbar></app-navbar>
+  <div class="cont">
+    <div class="path"></div>
+  </div>
+  <div class="landing__container-projects">
+    <a class="landing__container-projects--boxs add" routerLink="new">
+      <a class="addA">
+        <i class="far fa-plus-square fa-5x"></i>
+      </a>
+      <h1 class="addh1">CREAR PROYECTO</h1>
+    </a>
+    <a class="landing__container-projects--boxs" *ngFor="let data of dataProjects" [routerLink]="['apigen', data._id]">
+      <h1>NODE.JS</h1>
+      <h2>MongoDB</h2>
+      <h3>{{data.titleProject}}</h3>
+      <p>{{data.descProject}}</p>
+      <span>{{data.createdAtProject | date:'short'}}</span>
+
+    </a>
+  </div>
+</section>
