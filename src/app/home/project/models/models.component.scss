@@ -1,0 +1,81 @@
+@import "../../../../scss/util/mixin";
+@import "../../../../scss/util/variable";
+
+
+.project__models {
+  @include hxw(100%, 80%);
+  margin-left: 10%;
+  // background: black;
+  display: flex;
+
+  &-notfound {
+    @include hxw(60%, 100%);
+    // background: red;
+    @include flexCenter;
+    flex-direction: column;
+
+    p,
+    a {
+      font-size: 3rem;
+      font-family: $fontForm;
+    }
+
+    i {
+      font-size: 10rem;
+      // color: var(--color1);
+    }
+
+    a {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: var(--color1);
+    }
+  }
+
+  &-container {
+    @include hxw(100%, 100%);
+    // background: red;
+    display: flex;
+    flex-wrap: wrap;
+
+    // justify-content: space-between;
+    &--box {
+      @include hxw(15vh, 40%);
+      background: var(--back1);
+      transition: all .3s;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 2%;
+      cursor: pointer;
+      margin-bottom: 2%;
+      @include flexCenter;
+      flex-direction: column;
+      span {
+        font-size: 2rem;
+        font-family: $fontText;
+        font-weight: bold;
+      }
+      .fecha {
+        font-size: 1.4rem;
+      }
+      &:hover {
+        transform: translateY(5px);
+      }
+    }
+
+    .create {
+      background: var(--color1);
+      @include flexCenter;
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+
+      span {
+        font-size: 2rem;
+        font-family: $fontText;
+        font-weight: bold;
+      }
+
+
+
+    }
+  }
+}

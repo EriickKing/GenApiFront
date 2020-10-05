@@ -5,12 +5,11 @@
     <h1>{{projectName}}</h1>
   </div>
   <div class="project__container-options">
-    <a [routerLink]="['/home/apigen', id]" routerLinkActive="active">INICIO</a>
-    <a >MODELOS</a>
+    <a [routerLink]="['/home/apigen', id]" >INICIO</a>
+    <a [routerLink]="['/home/apigen', id, 'models']" routerLinkActive="active">MODELOS</a>
     <a >GET</a>
     <a >POST</a>
     <a >UPDATE</a>
-    <a >DELETE</a>
     <a >OPCIONES</a>
   </div>
   <router-outlet></router-outlet>

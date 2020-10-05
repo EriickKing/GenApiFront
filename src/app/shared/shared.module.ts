@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { NavbarsComponent } from './navbars/navbars.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
+    NavbarsComponent,
 
   ],
   imports: [
@@ -17,6 +19,7 @@ import { BrowserModule } from '@angular/platform-browser';
   ],
   exports: [
     NavbarComponent,
+    NavbarsComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA]
 })

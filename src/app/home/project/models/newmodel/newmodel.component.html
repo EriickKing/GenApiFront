@@ -1,0 +1,69 @@
+<app-navbars></app-navbars>
+<section class="newmodel__container">
+  <div class="newmodel__container-header">
+    <a href="">Modelos</a>
+    <div></div>
+    <h1>Crear Modelo</h1>
+  </div>
+  <div class="newmodel__container-wrapp">
+    <form class="primer" [formGroup]="modelForm">
+      <div class="form__group">
+        <span style="color: white; margin-left: .3rem;">Titulo del Modelo</span>
+        <input type="text" class="form__input key" formControlName="titleModel">
+      </div>
+      <button class="button__key" (click)="addGroupModel()"><i class="fas fa-plus"></i></button>
+
+      <div formArrayName="model" class="model">
+        <div *ngFor="let groupModel of modelForm.controls.model['controls']; let i = index">
+          <div [formGroupName]="i" class="groupName">
+
+            <div class="form__group" style="margin-top: 2.3%;">
+              <span style="color: white;">Nombre Key</span>
+              <input type="text" class="form__input" formControlName="keyModel">
+            </div>
+
+            <div formArrayName="typeArray">
+              <div
+                *ngFor="let types of modelForm.controls.model['controls'][i]['controls']['typeArray']['controls']; let x = index">
+                <div [formGroupName]="x" class="groupType">
+                  <div class="form__group">
+                    <span style="color: white;">Tipo de Dato</span>
+                    <select class="form__input" formControlName="typeModal" (change)="getTypeDate(i,x)">
+                      <option value="type">Type</option>
+                      <option value="required">Required</option>
+                      <option value="unique">Unique</option>
+                    </select>
+                  </div>
+                  <div class="form__group">
+                    <span style="color: white;">Valor</span>
+                    <select name="" id="" class="form__input" formControlName="answerType" (change)="addGroupTypes(i)"
+                      *ngIf="modelForm.controls.model['controls'][i]['controls']['typeArray']['controls'][x].controls.typeModal.value == 'type'">
+                      <option value="">String</option>
+                      <option value="">Number</option>
+                      <option value="">Array</option>
+                      <option value="">Date</option>
+                    </select>
+                    <select name="" id="" class="form__input" formControlName="answerType" (change)="addGroupTypes(i)"
+                      *ngIf="modelForm.controls.model['controls'][i]['controls']['typeArray']['controls'][x].controls.typeModal.value == 'required'">
+                      <option value="">True</option>
+                      <option value="">False</option>
+                    </select>
+                    <select name="" id="" class="form__input" formControlName="answerType" (change)="addGroupTypes(i)"
+                      *ngIf="modelForm.controls.model['controls'][i]['controls']['typeArray']['controls'][x].controls.typeModal.value == 'unique'">
+                      <option value="">True</option>
+                      <option value="">False</option>
+                    </select>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+</section>

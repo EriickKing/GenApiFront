@@ -7,13 +7,17 @@ import { NewProjectComponent } from './new-project/new-project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './project/project.component';
 import { InformationComponent } from './project/information/information.component';
+import { ModelsComponent } from './project/models/models.component';
+import { NewmodelComponent } from './project/models/newmodel/newmodel.component';
 
 @NgModule({
   declarations: [
     LandingComponent,
     NewProjectComponent,
     ProjectComponent,
-    InformationComponent
+    InformationComponent,
+    ModelsComponent,
+    NewmodelComponent
   ],
   imports: [
     CommonModule,

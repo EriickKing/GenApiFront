@@ -1,0 +1,164 @@
+@import "../../../../../scss/util/mixin";
+@import "../../../../../scss/util/variable";
+
+.newmodel__container {
+  @include hxw(85vh, 100%);
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    @include hxw(7vh, 80%);
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    border-bottom: 2px solid var(--color1);
+
+    div {
+      @include hxw(1rem, 1rem);
+      background: var(--color1);
+      border-radius: 100%;
+      margin-left: 1%;
+    }
+
+    h1,
+    a {
+      font-size: 2rem;
+      font-family: $fontText;
+      margin-left: 1%;
+      color: var(--color1);
+    }
+
+    a {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+
+  &-wrapp {
+    @include hxw(100vh, 80%);
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    // border-bottom: 2px solid var(--color1);
+    // background: var(--back1);
+
+    p {
+      margin-top: 2%;
+      font-size: 2rem;
+      font-family: $fontText;
+    }
+
+    form {
+      width: 80%;
+
+      .button__key {
+        position: fixed;
+        padding: 1rem;
+        background: var(--color1);
+        outline: none;
+        border: none;
+
+
+        @include flexCenter;
+        // text-align: center;
+
+        border-radius: 50%;
+        font-family: $fontText;
+        bottom: 7%;
+        height: 10vh;
+        width: 10vh;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px 0px rgba(#ff3333, .2);
+        right: 10%;
+        transition: all .2s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        i {
+          font-size: 3rem;
+          color: var(--back2);
+          font-weight: 600;
+        }
+      }
+
+      .key {
+        width: 69.5%;
+      }
+
+      input,
+      select {
+        //   width: 50%;
+
+        padding: 1.4rem;
+
+        option {
+          color: black;
+          font-family: $fontForm;
+          padding-left: 0rem;
+          font-weight: 400;
+        }
+      }
+
+
+      .model {
+        @include hxw(auto, 100%);
+
+        .groupName {
+          // background: goldenrod;
+          display: flex;
+          @include hxw(100%, 100%);
+
+          .groupType {
+            display: flex;
+            margin-left: 4%;
+
+            .form__group {
+              margin-left: 3%;
+
+              select {
+                margin-top: 2.2%;
+                padding-left: 0rem;
+                width: 30vh;
+
+                padding: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+
+      .iconos {
+        position: fixed;
+        margin-left: 50%;
+        margin-top: 1.8%;
+        display: flex;
+
+        a {
+          font-size: 2rem;
+          cursor: pointer;
+
+          &:last-child {
+            margin-left: 25%;
+            // color: white;
+          }
+        }
+
+        .add {
+          i {
+            color: #009900;
+
+          }
+
+        }
+
+        .remove {
+          i {
+            color: var(--color1);
+          }
+        }
+      }
+    }
+  }
+}
